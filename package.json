@@ -12,7 +12,8 @@
     "vite-plugin-restart": "^0.4.2"
   },
   "dependencies": {
-    "three": "^0.174.0"
+    "three": "^0.174.0",
+    "three.js": "^0.77.0"
   },
   "description": "Download [Node.js](https://nodejs.org/en/download/). Run this followed commands:",
   "main": "vite.config.js",

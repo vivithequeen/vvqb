@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-const width = window.innerWidth, height = window.innerHeight;
+const width = window.innerWidth/4, height = window.innerHeight/4;
 
 // init
 
