@@ -1,6 +1,6 @@
-import * as THREE from './node_modules/three/build/three.module.js';
+import * as THREE from '/node_modules/three/build/three.module.js';
 
-const width = window.innerWidth/4, height = window.innerHeight/4;
+const width = window.innerWidth, height = window.innerHeight;
 
 // init
 
@@ -18,6 +18,7 @@ scene.add( mesh );
 const renderer = new THREE.WebGLRenderer( { antialias: true } );
 renderer.setSize( width, height );
 renderer.setAnimationLoop( animate );
+renderer.setPixelRatio(window.devicePixelRatio);
 document.body.appendChild( renderer.domElement );
 
 // animation
