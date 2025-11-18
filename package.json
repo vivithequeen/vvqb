@@ -1,27 +1,22 @@
 {
-  "name": "vanilla-three-starter",
+  "name": "threejs-journey-exercise",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
-    "dev": "vite --host",
-    "build": "vite build",
-    "preview": "vite preview --host",
-    "eslint": "eslint --ext .js src"
+    "dev": "vite",
+    "build": "vite build"
   },
   "devDependencies": {
-    "eslint": "^8.53.0",
-    "eslint-plugin-import": "^2.29.0",
-    "vite": "^7.2.2",
-    "vite-plugin-glsl": "^1.1.2"
+    "vite": "^6.4.1",
+    "vite-plugin-restart": "^0.4.2"
   },
   "dependencies": {
-    "22": "^0.0.0",
-    "detect-gpu": "^5.0.37",
-    "lil-gui": "^0.19.1",
-    "stats-gl": "^2.0.1",
-    "three": "^0.159.0",
-    "three.js": "^0.77.0"
-  }
+    "three": "^0.174.0"
+  },
+  "description": "Download [Node.js](https://nodejs.org/en/download/). Run this followed commands:",
+  "main": "vite.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
