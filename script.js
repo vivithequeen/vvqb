@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from './node_modules/three/build/three.module.js';
 
 const width = window.innerWidth/4, height = window.innerHeight/4;
 
@@ -23,7 +23,7 @@ document.body.appendChild( renderer.domElement );
 // animation
 
 function animate( time ) {
-
+	console.log("meowwww");
 	mesh.rotation.x = time / 2000;
 	mesh.rotation.y = time / 1000;
 
