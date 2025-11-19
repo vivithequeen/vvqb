@@ -1,6 +1,7 @@
 
 
 export default {
+    base: "https://vivithequeen.github.io/vvqb/",
     root: 'src/', // Sources files (typically where index.html is)
     publicDir: '../static/', // Path from "root" to static assets (files that are served as they are)
     server:
