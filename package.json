@@ -1,25 +1,24 @@
 {
   "name": "vvqb",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "deploy": "npm run build && gh-pages -d dist"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist"
   },
-  "devDependencies": {
-    "gh-pages": "^6.3.0",
-    "vite": "^6.4.1",
-    "vite-plugin-restart": "^0.4.2"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivithequeen/vvqb.git"
   },
-  "dependencies": {
-    "three": "^0.174.0",
-    "three.js": "^0.77.0"
-  },
-  "description": "Download [Node.js](https://nodejs.org/en/download/). Run this followed commands:",
-  
-  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vivithequeen/vvqb/issues"
+  },
+  "homepage": "https://github.com/vivithequeen/vvqb#readme",
+  "dependencies": {
+    "gh-pages": "^6.3.0",
+    "three": "^0.181.1"
+  }
 }

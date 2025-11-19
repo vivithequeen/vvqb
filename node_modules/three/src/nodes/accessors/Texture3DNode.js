@@ -153,7 +153,20 @@ class Texture3DNode extends TextureNode {
 	 */
 	generateUV( builder, uvNode ) {
 
-		return uvNode.build( builder, 'vec3' );
+		return uvNode.build( builder, this.sampler === true ? 'vec3' : 'ivec3' );
+
+	}
+
+	/**
+	 * Generates the offset code snippet.
+	 *
+	 * @param {NodeBuilder} builder - The current node builder.
+	 * @param {Node} offsetNode - The offset node to generate code for.
+	 * @return {string} The generated code snippet.
+	 */
+	generateOffset( builder, offsetNode ) {
+
+		return offsetNode.build( builder, 'ivec3' );
 
 	}
 
@@ -183,4 +196,4 @@ export default Texture3DNode;
  * @param {?Node<int>} [levelNode=null] - The level node.
  * @returns {Texture3DNode}
  */
-export const texture3D = /*@__PURE__*/ nodeProxy( Texture3DNode );
+export const texture3D = /*@__PURE__*/ nodeProxy( Texture3DNode ).setParameterLength( 1, 3 );
