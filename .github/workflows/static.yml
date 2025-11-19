@@ -34,9 +34,9 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@4
       - name: Install dependencies
-        uses: npm install@4
+        uses: npm install
       - name: Build app
-        uses: npm run build@4
+        uses: npm run build
         
       - name: Setup Pages
         uses: actions/configure-pages@v5
