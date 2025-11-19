@@ -9,17 +9,20 @@ camera.position.z = 1;
 
 const scene = new THREE.Scene();
 
-const geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
+const geometry = new THREE.BoxGeometry( 0.4, 0.2, 0.2 );
 const material = new THREE.MeshNormalMaterial();
+material.magFilter = THREE.NearestFilter;
+material.minFilter = THREE.NearestFilter;
 
 const mesh = new THREE.Mesh( geometry, material );
 scene.add( mesh );
 
-const renderer = new THREE.WebGLRenderer( { antialias: true } );
-renderer.setSize( width, height );
+const canvas = document.querySelector('canvas.webgl');
+const renderer = new THREE.WebGLRenderer( { canvas, antialias: false } );
+renderer.setSize( width, height, false );
 renderer.setAnimationLoop( animate );
-renderer.setPixelRatio(window.devicePixelRatio);
-document.body.appendChild( renderer.domElement );
+renderer.setPixelRatio(1);
+renderer.shadowMap.type = THREE.NearestFilter;
 
 // animation
 
