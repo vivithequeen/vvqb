@@ -17,13 +17,13 @@
   "bugs": {
     "url": "https://github.com/vivithequeen/vvqb/issues"
   },
-  "homepage": "https://github.com/vivithequeen/vvqb#readme",
+  "homepage": "https://github.com/vivithequeen/vvqb",
   "dependencies": {
-    "gh-pages": "^6.3.0",
     "three": "^0.181.1",
     "vite": "^7.2.2"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "vite-plugin-restart": "^2.0.0"
   }
 }
