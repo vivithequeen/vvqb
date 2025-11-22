@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/vivithequeen/vvqb/issues"
   },
-  "homepage": "https://github.com/vivithequeen/vvqb",
+  "homepage": "https://vvqb.dev",
   "dependencies": {
     "@tweenjs/tween.js": "^25.0.0",
     "gd-pages": "^1.1.0",
