@@ -1,11 +1,14 @@
 import * as THREE from '../three/build/three.module.js';
+// Use the ESM build of tween.js (CDN) so this module can import it reliably
+import TWEEN from 'https://cdn.jsdelivr.net/npm/@tweenjs/tween.js@18.6.4/dist/tween.esm.js';
 import { GLTFLoader } from '../three/examples/jsm/loaders/GLTFLoader.js';
 const width = window.innerWidth, height = window.innerHeight;
 
 // init
 
-const camera = new THREE.PerspectiveCamera(70, width / height, 0.01, 10);
-camera.position.z = 1;
+const camera = new THREE.PerspectiveCamera(90, width / height, 0.01, 10);
+camera.position.z = 0;
+camera.position.y = 0;
 
 const scene = new THREE.Scene();
 
@@ -16,7 +19,7 @@ material.minFilter = THREE.NearestFilter;
 
 const mesh = new THREE.Mesh(geometry, material);
 // move debug cube away so it doesn't overlap the loaded model
-mesh.position.set(-2, 0, 0);
+mesh.position.set(-0.5, 0, 0);
 
 const loader = new GLTFLoader();
 
@@ -28,26 +31,15 @@ loader.load('monkey.glb', function (gltf) {
 		if (obj.isMesh) {
 			obj.material = new THREE.MeshNormalMaterial();
 			obj.material.needsUpdate = true;
+			obj.position.set(0,0,0);
 			// ensure geometry bounding info is available
-			if (obj.geometry && obj.geometry.computeBoundingBox) obj.geometry.computeBoundingBox();
+			
+			
 		}
 	});
 
 	scene.add(gltf.scene);
 
-	// Fit camera to the loaded model
-	const box = new THREE.Box3().setFromObject(gltf.scene);
-	const size = box.getSize(new THREE.Vector3());
-	const center = box.getCenter(new THREE.Vector3());
-	const maxDim = Math.max(size.x, size.y, size.z);
-	if (maxDim > 0) {
-		const fov = camera.fov * (Math.PI / 180);
-		let cameraZ = Math.abs(maxDim / 2 / Math.tan(fov / 2));
-		cameraZ *= 1.5; // add some padding
-		camera.position.set(center.x, center.y, center.z + cameraZ);
-		camera.lookAt(center);
-		camera.updateProjectionMatrix();
-	}
 
 }, undefined, function (error) {
 
@@ -59,27 +51,33 @@ scene.add(mesh);
 
 const canvas = document.querySelector('canvas.webgl');
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: false });
-renderer.setSize(width, height, false);
+renderer.setSize(width/2, height/2, false);
 renderer.setAnimationLoop(animate);
 renderer.setPixelRatio(1);
 renderer.shadowMap.type = THREE.NearestFilter;
 
-// animation
+let camTween = null;
 
-scene.traverse(function(object) {
-  if (object.isMesh) {
-    // You can also print specific properties of the mesh, for example:
-    console.log("Mesh Name:", object.name);
-    // console.log("Mesh Position:", object.position);
-    // console.log("Mesh Geometry:", object.geometry);
-    //console.log("Mesh Material:", object.material);
-  }
+const myButton = document.getElementById("lookLeft");
+
+myButton.addEventListener("click", function() {
+	if (camTween) camTween.stop(); // stop any running tween
+	camTween = new TWEEN.Tween(camera.rotation)
+		.to({ x: 0, y: 1.57079632679, z: 0 }, 3000)
+		.easing(TWEEN.Easing.Cubic.Out)
+		.onStart(() => console.log('camera tween started'))
+		.onComplete(() => console.log('camera tween complete'))
+		.start();
 });
+
+
+
 function animate(time) {
 	console.log("meowwww");
 	mesh.rotation.x = time / 2000;
 	mesh.rotation.y = time / 1000;
 
+	// Update tweens every frame (no argument needed, uses internal clock)
+	TWEEN.update();
 	renderer.render(scene, camera);
-
 }
