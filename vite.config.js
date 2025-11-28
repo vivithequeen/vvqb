@@ -1,5 +1,7 @@
 
 
+import { resolve } from 'path'
+
 export default {
     base: "https://vvqb.dev",
     root: 'src/', // Sources files (typically where index.html is)
@@ -13,7 +15,14 @@ export default {
     {
         outDir: '../dist', // Output in the dist/ folder
         emptyOutDir: true, // Empty the folder first
-        sourcemap: true // Add sourcemap
+        sourcemap: true, // Add sourcemap
+        rollupOptions: {
+            // include additional HTML pages in the final build
+            input: {
+                main: resolve(__dirname, 'src/index.html'),
+                friends: resolve(__dirname, 'src/friends.html')
+            }
+        }
     },
     //plugins:
     //[
