@@ -23,6 +23,7 @@ body {
 }
 
 div { 
+  color: black;
   font-family: 'JetBrainsMono';
 }
 
@@ -33,9 +34,9 @@ p {
   font-size: 1.5rem;
 }
 canvas {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+ position: fixed;
+ left: 0;
+ top: 0;
 
   image-rendering: pixelated;
   /* For modern browsers */
@@ -45,8 +46,9 @@ canvas {
   /* Chrome, Safari */
   display: block;
   /* Removes extra space below inline elements */
-  width: 75%;
-  height: 75%;
+  width: 100%;
+  height: 100%;
+
 }
 
 
@@ -82,18 +84,21 @@ canvas {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  
   top: 0px;
   left: 0px;
-  
-  background-color: var(--dark-purple);
+  background-image: linear-gradient(to bottom right, var(--pink), var(--dark-purple));
 }
 
 .main {
+  position: relative;
+  padding: 10px;
   width :60%;
   height :60%;
-  border: 4px dashed var(--pink);
-  background-color: var(--blue);
+  
+  background-image: linear-gradient(to top right, var(--blue), var(--light-green));
+  
+  border: 2px solid var(--orange);
 }
 
 #friends {
@@ -101,4 +106,30 @@ canvas {
   flex-wrap: wrap;
   /* Allow items to wrap to the next line */
   justify-content: space-around;
+}
+
+.main_buttons {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  z-index: 200; /* sit above canvas */
+}
+
+.main_button { 
+  /* buttons live in .main_buttons - don't absolute position individuals */
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.2);
+  background: rgba(255,255,255,0.9);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.button_image {
+  width : 20px
 }

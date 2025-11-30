@@ -10,34 +10,43 @@
 </head>
 
 <body>
-
+    <canvas class="webgl"></canvas>
     <div class="container">
-        <div class = "main">
+        <div class="main">
             <div>
                 <h>Hi! I'm Violet</h>
-                <p>I am a game devloper and programming, mostly working in the Godot Game Engine using GD Script or C#, or in C++.</p>
-                
+                <p>I am a game devloper and programming, mostly working in the Godot Game Engine using GD Script or C#,
+                    or in C++.</p>
+
             </div>
+            <input id="shark_bar" type="range" name="cowbell" min="1" max="20" value="7" step="1" />
 
-            <canvas class="webgl"></canvas>
-            <button>
-                
-                friends
-            </button>
-            <button>
-                <img src = "icons/github.svg">
-                <p>github</p>
-            </button>
-            <button>
-                itch
-            </button>
+            <!-- bottom toolbar for the action buttons (positioned by CSS) -->
+            <div class="main_buttons">
+                <a href = "friends">
+                    <button class="main_button">
+                        <img src="icons/heart.svg" style="width:20px;" alt="friends">
+                    </button>
+                </a>
+                <a href = "https://github.com/vivithequeen">
+                    <button class="main_button">
+                        <img class="button_image" src="icons/github.svg" alt="github">
+                    </button>
+                </a>
+                <a href="https://vivithequeen.itch.io/">
+                    <button class="main_button">
+                        <img class="button_image" src="icons/itchdotio.svg" style="width:20px" alt="itch.io">
+                    </button>
+                </a>
+                <a href = "https://www.youtube.com/@ViviTheQueen">
+                    <button class="main_button">
+                        <img class="button_image" src="icons/youtube.svg" style="width:20px" alt="youtube">
+
+                    </button>
+                </a>
+            </div>
         </div>
-        
-        
-    </div>
-    
 
-    <div id="base-screen" class="base-screen-style">
 
     </div>
 
