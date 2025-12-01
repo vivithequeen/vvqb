@@ -13,26 +13,6 @@
   src: url(JetBrainsMono-Regular.ttf); /* url of the font */
 }
 
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
-
-div { 
-  color: black;
-  font-family: 'JetBrainsMono';
-}
-
-h { 
-  font-size: 2.5rem;
-}
-p { 
-  font-size: 1.5rem;
-}
 canvas {
  position: fixed;
  left: 0;
@@ -49,87 +29,4 @@ canvas {
   width: 100%;
   height: 100%;
 
-}
-
-
-#info {
-  position: absolute;
-  top: 10px;
-  width: 100%;
-  text-align: center;
-  z-index: 100;
-  display: block;
-  color: var(--light-green);
-}
-
-
-
-
-
-.button88x31 {
-  image-rendering: pixelated;
-  /* For modern browsers */
-  image-rendering: -moz-crisp-edges;
-  /* Firefox */
-  image-rendering: -webkit-optimize-contrast;
-  width: 88px;
-  height: 31px;
-
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
-  top: 0px;
-  left: 0px;
-  background-image: linear-gradient(to bottom right, var(--pink), var(--dark-purple));
-}
-
-.main {
-  position: relative;
-  padding: 10px;
-  width :60%;
-  height :60%;
-  
-  background-image: linear-gradient(to top right, var(--blue), var(--light-green));
-  
-  border: 2px solid var(--orange);
-}
-
-#friends {
-
-  flex-wrap: wrap;
-  /* Allow items to wrap to the next line */
-  justify-content: space-around;
-}
-
-.main_buttons {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  z-index: 200; /* sit above canvas */
-}
-
-.main_button { 
-  /* buttons live in .main_buttons - don't absolute position individuals */
-  padding: 6px 10px;
-  border-radius: 6px;
-  border: 1px solid rgba(0,0,0,0.2);
-  background: rgba(255,255,255,0.9);
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.button_image {
-  width : 20px
 }
