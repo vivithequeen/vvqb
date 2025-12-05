@@ -1,44 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VVQB</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/23.1.1/tween.umd.js"></script>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>VVQB</title>
+
+  <!-- Halfmoon CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/halfmoon@2.0.2/css/halfmoon.min.css" rel="stylesheet"
+    integrity="sha256-RjeFzczeuZHCyS+Gvz+kleETzBF/o84ZRHukze/yv6o=" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/halfmoon@2.0.2/css/cores/halfmoon.modern.css" rel="stylesheet"
+    integrity="sha256-DD6elX+jPmbFYPsGvzodUv2+9FHkxHlVtQi0/RJVULs=" crossorigin="anonymous">
   <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@tweenjs/tween.js@18.6.4/dist/tween.esm.js"></script>
-  <script type="module" crossorigin src="https://vvqb.dev/assets/script-DYMILbsP.js"></script>
+  <script type="module" crossorigin src="https://vvqb.dev/assets/script-DR4ruj2M.js"></script>
   <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@tweenjs/tween.js@18.6.4/dist/tween.esm.js"></script>
-  <link rel="stylesheet" crossorigin href="https://vvqb.dev/assets/script-BQjswzhP.css">
+  <link rel="stylesheet" crossorigin href="https://vvqb.dev/assets/script-BQoWMFkX.css">
 </head>
 
 <body>
-    <canvas class="webgl"></canvas>
-    <div class="container">
-        <div class="main">
-            <div>
-                <h>Hi! I'm Violet</h>
-                <p>I am a game devloper and programming, mostly working in the Godot Game Engine using GD Script or C#,
-                    or in C++.</p>
 
-            </div>
-            <input id = shark_bar type="range" id="cowbell" name="cowbell" min="1" max="20" value="10" step="1"/>
-            <button>
-                
-                friends
-            </button>
-            <button>
-                <img src="icons/github.svg">
-                <p>github</p>
-            </button>
-            <button>
-                itch
-            </button>
+  <canvas class="webgl"></canvas>
+
+
+  <div class="container d-flex justify-content-center align-items-center" style="min-height:100vh;">
+    <div class="card"
+      style="background-color: #717fb0 ; width: 100%; height: 420px; max-width: 95%; border: 2px solid #a3d1af; position: relative;">
+      <div class="card-body">
+        <div class="card-top-right"
+          style="position: absolute; top: 12px; right: 12px; display: flex; gap: 8px; align-items: center;">
+          <button type="button" id="button" class="btn btn-primary fs-5">Home</button>
+          <button type="button" id="button" class="btn btn-primary fs-5">Projects</button>
+          <button type="button" id="button" class="btn btn-primary fs-5">Contact</button>
+          <button type="button" id="button" class="btn btn-primary fs-5">Friends</button>
         </div>
+        <h3 style="color : #e0e0dc; size: 15rem;" class="card-title fs-1">hi! i'm <span class = "fs-1" id = "name">violet</span></h3>
+        <p style="color : #e0e0dc;" class="card-text fs-4">im violet or vivi, i dont really mind which. i do a lot of game
+          development in godot + gdscript or c#. i also do c++ development sometimes. </p>
 
 
+
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+
+
+
+
+            <p style="color : #e0e0dc" class = "fs-5">i really like retro style 3d rendering, raycast renderers, projection based
+              renederers and all around cool software renderers.</p>
+          </div>
+          <div class="col-sm-12 col-md-6" >
+            <p style="color : #e0e0dc" class = "fs-5" >aside from programming, i enjoy sewing, pixel art, and games!</p>
+          </div>
+
+
+        </div>
+        <div class="card-bottom"
+          style="position: absolute; left: 12px; right: 12px; bottom: 12px; display: flex; gap: 8px; align-items: center;">
+          <a href="https://www.youtube.com/@ViviTheQueen">
+            <button id="icon" type="button" class="btn btn-dark">
+              <img style="filter: none;" width="40" class="img-fluid rounded" src="https://vvqb.dev/icons/youtube.svg" alt="youtube">
+            </button>
+          </a>
+          <a href="https://github.com/vivithequeen">
+            <button id="icon" type="button" class="btn btn-dark">
+              <img style="filter: none;" width="40" class="img-fluid rounded" src="https://vvqb.dev/icons/github.svg" alt="github">
+            </button>
+          </a>
+          <a href="https://vivithequeen.itch.io/">
+            <button id="icon" type="button" class="btn btn-dark">
+              <img style="filter: none;" width="40" class="img-fluid rounded" src="https://vvqb.dev/icons/itchdotio.svg" alt="itch">
+            </button>
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
 
+  <!-- Option 1: Bootstrap JS bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha256-CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC+mjoJimHGw=" crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha256-whL0tQWoY1Ku1iskqPFvmZ+CHsvmRWx/PIoEvIeWh4I=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha256-3gQJhtmj7YnV1fmtbVcnAV6eI4ws0Tr48bVZCThtCGQ=" crossorigin="anonymous"></script>
+    -->
 </body>
 
 </html>
