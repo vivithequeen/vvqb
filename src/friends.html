@@ -1,20 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VVQB</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/23.1.1/tween.umd.js"></script>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>VVQB</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Halfmoon CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/halfmoon@2.0.2/css/halfmoon.min.css" rel="stylesheet"
+    integrity="sha256-RjeFzczeuZHCyS+Gvz+kleETzBF/o84ZRHukze/yv6o=" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/halfmoon@2.0.2/css/cores/halfmoon.modern.css" rel="stylesheet"
+    integrity="sha256-DD6elX+jPmbFYPsGvzodUv2+9FHkxHlVtQi0/RJVULs=" crossorigin="anonymous">
 </head>
 
 <body>
-    <canvas class="webgl"></canvas>
-    <div class="container">
-        <div class="main">
-            <div>
-                <a href="friends"><img src="88x31/vvqb_dev.gif" alt="friends" class="button88x31"></a>
+
+  <canvas class="webgl"></canvas>
+
+
+  <div class="container d-flex justify-content-center align-items-center" style="min-height:100vh;">
+    <div class="card" style="background-color: #717fb0 ; width: 100%; height: 420px; max-width: 95%; border: 2px solid #a3d1af; position: relative;">
+      <div class="card-body">
+        <div class="card-top-right" style="position: absolute; top: 12px; right: 12px; display: flex; gap: 8px; align-items: center;">
+          <button type="button" style = "background-color: #ebc3a7; color: #615e85" class="btn btn-primary">Home</button>
+          <button type="button" style = "background-color: #ebc3a7; color: #615e85" class="btn btn-primary">Projects</button>
+          <button type="button" style = "background-color: #ebc3a7; color: #615e85" class="btn btn-primary">Friends</button>
+        </div>
+        <h3 style="color : #e0e0dc" class="card-title">hi! i'm violet</h3>
+        <p style = "color : #e0e0dc;" class="card-text">im violet or vivi, i dont really mind which. i do a lot of game development in godot + gdscript or c#. i also do c++ development sometimes. </p>
+
+                        <a href="friends"><img src="88x31/vvqb_dev.gif" alt="friends" class="button88x31"></a>
                 <a href="https://notbyai.fyi"><img src="88x31/Created-By-a-Human-Not-By-AI-Badge-black.svg"
                         alt="Written by a Human, Not by AI" class="button88x31"></a>
                 <a href="https://prpl.wtf"><img src="88x31/prpl_wtf.gif" alt="prpl.wtf" class="button88x31"></a>
@@ -24,44 +42,47 @@
                         alt="https://www.thetrevorproject.org/" class="button88x31"></a>
                 <a href="https://aconlin.com"><img src="88x31/aconlin_com.gif" alt="aconlin.comp" class="button88x31"></a>
                 
-            </div>
-        
-        <input id="shark_bar" type="range" name="cowbell" min="1" max="20" value="10" step="1" />
 
-        <!-- bottom toolbar for the action buttons (positioned by CSS) -->
-        <div class="main_buttons">
-            <a href="friends">
-                <button class="main_button">
-                    <img src="icons/heart.svg" style="width:20px;" alt="friends">
-                    friends
-                </button>
-            </a>
-            <a href="https://github.com/vivithequeen">
-                <button class="main_button">
-                    <img class="button_image" src="icons/github.svg" alt="github">
-                    github
-                </button>
-            </a>
-            <a href="https://vivithequeen.itch.io/">
-                <button class="main_button">
-                    <img class="button_image" src="icons/itchdotio.svg" style="width:20px" alt="itch.io">
-                    itch
-                </button>
-            </a>
-            <a href="https://www.youtube.com/@ViviTheQueen">
-                <button class="main_button">
-                    <img class="button_image" src="icons/youtube.svg" style="width:20px" alt="youtube">
-                    youtube
-                </button>
-            </a>
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+
+
+
+
+            <p style = "color : #e0e0dc">i really like retro style 3d rendering, raycast renderers, projection based renederers and all around cool software renderers.</p>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <p style = "color : #e0e0dc">right</p>
+          </div>
+
+
         </div>
+        <div class="card-bottom" style="position: absolute; left: 12px; right: 12px; bottom: 12px; display: flex; gap: 8px; align-items: center;">
+          <button style="background-color: transparent; border: none; padding: 6px;" type="button" class="btn btn-dark">
+            <img style="filter: none;" width="30" class="img-fluid rounded" src="/icons/youtube.svg" alt="youtube">
+          </button>
+
+          <button style="background-color: transparent; border: none; padding: 6px;" type="button" class="btn btn-dark">
+            <img style="filter: none;" width="30" class="img-fluid rounded" src="/icons/github.svg" alt="github">
+          </button>
+
+          <button style="background-color: transparent; border: none; padding: 6px;" type="button" class="btn btn-dark">
+            <img style="filter: none;" width="30" class="img-fluid rounded" src="/icons/itchdotio.svg" alt="itch">
+          </button>
         </div>
+      </div>
     </div>
+  </div>
 
+  <!-- Option 1: Bootstrap JS bundle with Popper -->
+  <script type="module" src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha256-CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC+mjoJimHGw=" crossorigin="anonymous"></script>
 
-    </div>
-
-    <script type="module" src="./script.js"></script>
+  <!-- Option 2: Separate Popper and Bootstrap JS
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha256-whL0tQWoY1Ku1iskqPFvmZ+CHsvmRWx/PIoEvIeWh4I=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha256-3gQJhtmj7YnV1fmtbVcnAV6eI4ws0Tr48bVZCThtCGQ=" crossorigin="anonymous"></script>
+    -->
 </body>
 
 </html>

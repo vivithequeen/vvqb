@@ -1,23 +1,26 @@
-:root{
-  --dark-purple : #615e85;
-  --light-green : #a3d1af;
-  --dark-blue : #717fb0;
-  --orange : #ebc3a7;
-  --purple : #9c8dc2;
-  --blue : #90b4de;
-  --pink : #d9a3cd;
-  --whiteish : #e0e0dc;
+:root {
+  --dark-purple: #615e85;
+  --light-green: #a3d1af;
+  --dark-blue: #717fb0;
+  --orange: #ebc3a7;
+  --purple: #9c8dc2;
+  --blue: #90b4de;
+  --pink: #d9a3cd;
+  --whiteish: #e0e0dc;
 }
+
 @font-face {
-  font-family: JetBrainsMono; /* set name */
-  
-  src: url(JetBrainsMono-Regular.ttf); /* url of the font */
+  font-family: JetBrainsMono;
+  /* set name */
+
+  src: url(JetBrainsMono-Regular.ttf);
+  /* url of the font */
 }
 
 canvas {
- position: fixed;
- left: 0;
- top: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
 
   image-rendering: pixelated;
   /* For modern browsers */
@@ -30,4 +33,39 @@ canvas {
   width: 100%;
   height: 100%;
 
+}
+
+#icon {
+  background-color: transparent;
+  border: none;
+  padding: 6px;
+  transition: filter 0.1s ease-in-out, scale 0.25s ease-in-out;
+ 
+}
+
+#icon:hover {
+  filter: invert(100%);
+  transform: scale(1.15);
+}
+
+#button {
+  background-color: #ebc3a7;
+  color: #615e85;
+  transition: filter 0.1s ease-in-out, scale 0.25s ease-in-out;
+}
+
+#button:hover {
+  filter: invert(100%);
+  transform: scale(1.10);
+}
+
+
+#name {
+    font-size: 72px; /* Adjust as needed */
+    font-weight: bold;
+    background-image: linear-gradient(90deg, #d9a3cd, #90b4de);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Fallback */
 }

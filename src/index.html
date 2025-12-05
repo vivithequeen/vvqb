@@ -22,17 +22,21 @@
 
 
   <div class="container d-flex justify-content-center align-items-center" style="min-height:100vh;">
-    <div class="card" style="background-color: #568F87; width: 100%; height: 420px; max-width: 95%; border: 2px solid #064232; position: relative;">
+    <div class="card"
+      style="background-color: #717fb0 ; width: 100%; height: 420px; max-width: 95%; border: 2px solid #a3d1af; position: relative;">
       <div class="card-body">
-        <div class="card-top-right" style="position: absolute; top: 12px; right: 12px; display: flex; gap: 8px; align-items: center;">
-          <button type="button" style = "background-color: #FFF5F2; color: #064232" class="btn btn-primary">Home</button>
-          <button type="button" style = "background-color: #FFF5F2; color: #064232" class="btn btn-primary">Projects</button>
-          <button type="button" style = "background-color: #FFF5F2; color: #064232" class="btn btn-primary">Friends</button>
+        <div class="card-top-right"
+          style="position: absolute; top: 12px; right: 12px; display: flex; gap: 8px; align-items: center;">
+          <button type="button" id="button" class="btn btn-primary fs-5">Home</button>
+          <button type="button" id="button" class="btn btn-primary fs-5">Projects</button>
+          <button type="button" id="button" class="btn btn-primary fs-5">Contact</button>
+          <button type="button" id="button" class="btn btn-primary fs-5">Friends</button>
         </div>
-        <h3 style="color : #FFF5F2" class="card-title">Hi! I'm Violet</h3>
-        <p class="card-text">I am a game devloper and programming, mostly working in the Godot Game Engine using GD Script or C#, or in C++.</p>
+        <h3 style="color : #e0e0dc; size: 15rem;" class="card-title fs-1">hi! i'm <span class = "fs-1" id = "name">violet</span></h3>
+        <p style="color : #e0e0dc;" class="card-text fs-4">im violet or vivi, i dont really mind which. i do a lot of game
+          development in godot + gdscript or c#. i also do c++ development sometimes. </p>
 
-        
+
 
         <div class="row">
           <div class="col-sm-12 col-md-6">
@@ -40,26 +44,32 @@
 
 
 
-            <p>left</p>
+            <p style="color : #e0e0dc" class = "fs-5">i really like retro style 3d rendering, raycast renderers, projection based
+              renederers and all around cool software renderers.</p>
           </div>
-          <div class="col-sm-12 col-md-6">
-            <p>right</p>
+          <div class="col-sm-12 col-md-6" >
+            <p style="color : #e0e0dc" class = "fs-5" >aside from programming, i enjoy sewing, pixel art, and games!</p>
           </div>
 
 
         </div>
-        <div class="card-bottom" style="position: absolute; left: 12px; right: 12px; bottom: 12px; display: flex; gap: 8px; align-items: center;">
-          <button style="background-color: transparent; border: none; padding: 6px;" type="button" class="btn btn-dark">
-            <img style="filter: none;" width="30" class="img-fluid rounded" src="/icons/youtube.svg" alt="youtube">
-          </button>
-
-          <button style="background-color: transparent; border: none; padding: 6px;" type="button" class="btn btn-dark">
-            <img style="filter: none;" width="30" class="img-fluid rounded" src="/icons/github.svg" alt="github">
-          </button>
-
-          <button style="background-color: transparent; border: none; padding: 6px;" type="button" class="btn btn-dark">
-            <img style="filter: none;" width="30" class="img-fluid rounded" src="/icons/itchdotio.svg" alt="itch">
-          </button>
+        <div class="card-bottom"
+          style="position: absolute; left: 12px; right: 12px; bottom: 12px; display: flex; gap: 8px; align-items: center;">
+          <a href="https://www.youtube.com/@ViviTheQueen">
+            <button id="icon" type="button" class="btn btn-dark">
+              <img style="filter: none;" width="40" class="img-fluid rounded" src="/icons/youtube.svg" alt="youtube">
+            </button>
+          </a>
+          <a href="https://github.com/vivithequeen">
+            <button id="icon" type="button" class="btn btn-dark">
+              <img style="filter: none;" width="40" class="img-fluid rounded" src="/icons/github.svg" alt="github">
+            </button>
+          </a>
+          <a href="https://vivithequeen.itch.io/">
+            <button id="icon" type="button" class="btn btn-dark">
+              <img style="filter: none;" width="40" class="img-fluid rounded" src="/icons/itchdotio.svg" alt="itch">
+            </button>
+          </a>
         </div>
       </div>
     </div>
