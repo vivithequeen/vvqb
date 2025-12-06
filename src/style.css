@@ -8,14 +8,37 @@
   --pink: #d9a3cd;
   --whiteish: #e0e0dc;
 }
-
 @font-face {
   font-family: JetBrainsMono;
   /* set name */
 
-  src: url(JetBrainsMono-Regular.ttf);
+  src: url(fonts/JetBrainsMono-Regular.ttf);
   /* url of the font */
 }
+@font-face {
+  font-family: Caveat-Variable;
+  /* set name */
+
+  src: url(fonts/Caveat-VariableFont_wght.ttf);
+  /* url of the font */
+}
+
+@font-face {
+  font-family: CaveatBrush-Regular;
+  /* set name */
+
+  src: url(fonts/CaveatBrush-Regular.ttf);
+  /* url of the font */
+}
+
+@font-face {
+  font-family: Micro5;
+  /* set name */
+
+  src: url(fonts/Micro5-Regular.ttf);
+  /* url of the font */
+}
+
 
 canvas {
   position: fixed;
@@ -35,12 +58,13 @@ canvas {
 
 }
 
+
 #icon {
   background-color: transparent;
   border: none;
   padding: 6px;
   transition: filter 0.1s ease-in-out, scale 0.25s ease-in-out;
- 
+
 }
 
 #icon:hover {
@@ -56,16 +80,60 @@ canvas {
 
 #button:hover {
   filter: invert(100%);
-  transform: scale(1.10);
+  transform: scale(1.05);
+}
+
+@keyframes color-loop {
+  0% {
+    font-family : "JetBrainsMono";
+    background-color: #d9a3cd;
+
+  }
+
+  25% {
+    font-family: "Caveat-Variable";
+    background-color: #90b4de;
+  }
+
+  75% {
+    font-family: "CaveatBrush-Regular";
+    background-color: #a3d1af;
+  }
+
+  100% {
+    font-family: "Micro5";
+    background-color: #ebc3a7;
+  }
+}
+
+#name {
+
+  font-size: 72px;
+  /* Adjust as needed */
+  font-weight: bold;
+  background-image: linear-gradient(90deg, #d9a3cd 0%, #90b4de 50%, #a3d1af 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  /* Fallback */
+  transition: background-image 5s ease-in-out;
+
+
+}
+
+#name:hover {
+
+
 }
 
 
-#name {
-    font-size: 72px; /* Adjust as needed */
-    font-weight: bold;
-    background-image: linear-gradient(90deg, #d9a3cd, #90b4de);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent; /* Fallback */
+.button88x31 {
+  image-rendering: pixelated;
+  /* For modern browsers */
+  image-rendering: -moz-crisp-edges;
+  /* Firefox */
+  image-rendering: -webkit-optimize-contrast;
+  width: 88px;
+  height: 31px;
 }
