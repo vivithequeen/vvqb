@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>VVQB</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Halfmoon CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/halfmoon@2.0.2/css/halfmoon.min.css" rel="stylesheet"
+        integrity="sha256-RjeFzczeuZHCyS+Gvz+kleETzBF/o84ZRHukze/yv6o=" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <canvas class="webgl"></canvas>
+
+
+    <div class="container d-flex justify-content-center align-items-center" style="min-height:100vh;">
+        <div class="card"
+            style="background-color: #717fb0 ; width: 100%; height: 600px; max-width: 95%; border: 2px solid #a3d1af; position: relative;">
+            <div class="card-body">
+                <div class="card-top-right"
+                    style="position: absolute; top: 12px; right: 12px; display: flex; gap: 8px; align-items: center;">
+                    <a href="/">
+                        <button type="button" id="button" class="btn btn-primary fs-5">home</button>
+                    </a>
+                    <a href="projects">
+                        <button type="button" id="button" class="btn btn-primary fs-5">projects</button>
+                    </a>
+                    <a href="contact">
+                        <button type="button" id="button" class="btn btn-primary fs-5">contact</button>
+                    </a>
+                    <a href="friends">
+                        <button type="button" id="button" class="btn btn-primary fs-5">friends</button>
+                    </a>
+
+                </div>
+                <h3 style="color : #e0e0dc; size: 15rem;" class="card-title fs-1">projects!!!</h3>
+                <div class="card" style="width: 18.75rem; border: 2px solid #d9a3cd; overflow: hidden">
+                    <img src="pictures/infinity_lost.png" class="card-img-top" alt="...">
+                    <div class="card-body" style="background-color: #615e85;">
+                        <h5 class="card-title" style="color: #d9a3cd;">infinity lost</h5>
+                        <p class="card-text" style="color : #e0e0dc">
+                            lost in a infinitey looping space shuttle, our protagonist John Loop has to escape his
+                            unfortunate circumstance.
+                        </p>
+           
+                        <a href="https://vivithequeen.itch.io/infinity-lost">
+                            <button type="button" id="button" class="btn btn-primary fs-5">itch page</button>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="card-bottom"
+                style="position: absolute; left: 12px; right: 12px; bottom: 12px; display: flex; gap: 8px; align-items: center;">
+                <a href="https://www.youtube.com/@ViviTheQueen">
+                    <button id="icon" type="button" class="btn btn-dark">
+                        <img style="filter: none;" width="40" class="img-fluid rounded" src="/icons/youtube.svg"
+                            alt="youtube">
+                    </button>
+                </a>
+                <a href="https://github.com/vivithequeen">
+                    <button id="icon" type="button" class="btn btn-dark">
+                        <img style="filter: none;" width="40" class="img-fluid rounded" src="/icons/github.svg"
+                            alt="github">
+                    </button>
+                </a>
+                <a href="https://vivithequeen.itch.io/">
+                    <button id="icon" type="button" class="btn btn-dark">
+                        <img style="filter: none;" width="40" class="img-fluid rounded" src="/icons/itchdotio.svg"
+                            alt="itch">
+                    </button>
+                </a>
+            </div>
+
+            <div style="position: absolute; right: 10px; bottom: 12px; display: flex; gap: 12px; align-items: center;">
+                <div class="form-check">
+                    <input checked class="form-check-input" type="checkbox" value="checked" id="shark_check">
+                    <label style="color : #e0e0dc;" class="form-check-label" for="example-checkbox-1">
+                        show sillys
+                    </label>
+                </div>
+
+                <input id="shark_bar" type="range" class="form-range" min="3" max="9" step="1" style="width: 120px;">
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+    <!-- Option 1: Bootstrap JS bundle with Popper -->
+    <script type="module" src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha256-CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC+mjoJimHGw=" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha256-whL0tQWoY1Ku1iskqPFvmZ+CHsvmRWx/PIoEvIeWh4I=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha256-3gQJhtmj7YnV1fmtbVcnAV6eI4ws0Tr48bVZCThtCGQ=" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

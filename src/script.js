@@ -30,8 +30,8 @@ const mtlLoader = new MTLLoader();
 // make sure loader resolves texture names from public root
 mtlLoader.setResourcePath('/');
 
-let x_blahaj = 7;
-let y_blahaj = 7;
+let x_blahaj = 6;
+let y_blahaj = 6;
 const meow = [];
 
 let cachedRoot = null; // single loaded root (with materials/textures) we'll clone
@@ -128,7 +128,7 @@ window.addEventListener('resize', () => {
 
 
 const canvas = document.querySelector('canvas.webgl');
-const renderer = new THREE.WebGLRenderer({ canvas, alpha : true, antialias: false });
+const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: false });
 renderer.setSize(width, height, false);
 renderer.setAnimationLoop(animate);
 renderer.setPixelRatio(1);
@@ -138,6 +138,7 @@ camera.position.set(0, 0, 10);
 
 
 const shark_bar = document.getElementById('shark_bar');
+const sillyButton = document.getElementById('shark_check');
 
 shark_bar.addEventListener('input', function () {
 	x_blahaj = this.value;
@@ -145,12 +146,20 @@ shark_bar.addEventListener('input', function () {
 	meowwww();
 })
 
+sillyButton.addEventListener('change', function () {
+meowwww();
+});
+
 console.log(meow);
 function meowwww() {
+	const showSillys = document.querySelector('#shark_check:checked') !== null;
+
 	// remove only previously added models and reuse cachedRoot if available
 	meow.forEach(m => scene.remove(m));
 	meow.length = 0;
-
+	if (!showSillys) {
+		return;
+	}
 	if (cachedRoot) {
 		createGridFromRoot(cachedRoot, x_blahaj, y_blahaj);
 		return;
