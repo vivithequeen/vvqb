@@ -20,7 +20,8 @@ export default {
             // include additional HTML pages in the final build
             input: {
                 main: resolve(__dirname, 'src/index.html'),
-                friends: resolve(__dirname, 'src/friends.html')
+                friends: resolve(__dirname, 'src/friends.html'),
+                projects: resolve(__dirname, 'src/projects.html')
             }
         }
     },
