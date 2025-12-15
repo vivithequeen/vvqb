@@ -8,6 +8,7 @@
   --pink: #d9a3cd;
   --whiteish: #e0e0dc;
 }
+
 @font-face {
   font-family: JetBrainsMono;
   /* set name */
@@ -15,6 +16,7 @@
   src: url(fonts/JetBrainsMono-Regular.ttf);
   /* url of the font */
 }
+
 @font-face {
   font-family: Caveat-Variable;
   /* set name */
@@ -37,6 +39,20 @@
 
   src: url(fonts/Micro5-Regular.ttf);
   /* url of the font */
+}
+
+@media (max-width: 770px) {
+  .card-top-right {
+    right: unset;
+    left: 12px;
+  }
+
+  .card-body {
+    padding-top: 4rem;
+  }
+  .card-title {
+    padding-top: 40px;
+  }
 }
 
 
@@ -85,7 +101,7 @@ canvas {
 
 @keyframes color-loop {
   0% {
-    font-family : "JetBrainsMono";
+    font-family: "JetBrainsMono";
     background-color: #d9a3cd;
 
   }
@@ -122,10 +138,7 @@ canvas {
 
 }
 
-#name:hover {
-
-
-}
+#name:hover {}
 
 
 .button88x31 {
